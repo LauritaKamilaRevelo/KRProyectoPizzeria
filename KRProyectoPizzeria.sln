@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KRProyectoPizzeria", "KRProyectoPizzeria\KRProyectoPizzeria.csproj", "{F701E3B0-2DF9-48C1-AB06-809D01023879}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KRPizzeriaAPI", "KRPizzeriaAPI\KRPizzeriaAPI.csproj", "{8ECF63EE-13E2-4C19-8B66-B17DE2B51F6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KRMauiApp", "KRMauiApp\KRMauiApp.csproj", "{F3CC7E0E-9C62-4DCA-AF0B-B684483CEAA9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F701E3B0-2DF9-48C1-AB06-809D01023879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F701E3B0-2DF9-48C1-AB06-809D01023879}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F701E3B0-2DF9-48C1-AB06-809D01023879}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F701E3B0-2DF9-48C1-AB06-809D01023879}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ECF63EE-13E2-4C19-8B66-B17DE2B51F6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ECF63EE-13E2-4C19-8B66-B17DE2B51F6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ECF63EE-13E2-4C19-8B66-B17DE2B51F6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ECF63EE-13E2-4C19-8B66-B17DE2B51F6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3CC7E0E-9C62-4DCA-AF0B-B684483CEAA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3CC7E0E-9C62-4DCA-AF0B-B684483CEAA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3CC7E0E-9C62-4DCA-AF0B-B684483CEAA9}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F3CC7E0E-9C62-4DCA-AF0B-B684483CEAA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3CC7E0E-9C62-4DCA-AF0B-B684483CEAA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3CC7E0E-9C62-4DCA-AF0B-B684483CEAA9}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {648D2BCB-0767-4F50-AB75-6F5C26E45B11}
+	EndGlobalSection
+EndGlobal

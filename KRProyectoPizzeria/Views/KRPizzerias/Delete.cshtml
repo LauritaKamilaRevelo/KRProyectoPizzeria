@@ -1,0 +1,39 @@
+﻿@model KRProyectoPizzeria.Models.KRPizzeria
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Eliminar Pizza</h1>
+
+<h3>Estas seguro de eliminar el producto?</h3>
+<div>
+    <h4>KRPizzeria</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KR_Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KR_Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KR_WithCocaCola)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KR_WithCocaCola)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KR_Precio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KR_Precio)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="idKRPizzeria" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

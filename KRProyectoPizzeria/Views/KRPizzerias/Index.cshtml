@@ -1,0 +1,47 @@
+﻿@model IEnumerable<KRProyectoPizzeria.Models.KRPizzeria>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Pagina Principal Pizzeria</h1>
+
+<p>
+    <a asp-action="Create">Ingresar Nueva Pizza</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.KR_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KR_WithCocaCola)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KR_Precio)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.KR_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KR_WithCocaCola)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KR_Precio)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.idKRPizzeria">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.idKRPizzeria">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.idKRPizzeria">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

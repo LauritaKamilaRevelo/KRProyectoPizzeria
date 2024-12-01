@@ -1,0 +1,36 @@
+﻿@model KRProyectoPizzeria.Models.KRPizzeria
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalles Pizza</h1>
+
+<div>
+    <h4>KRPizzeria</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KR_Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KR_Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KR_WithCocaCola)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KR_WithCocaCola)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KR_Precio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KR_Precio)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.idKRPizzeria">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
