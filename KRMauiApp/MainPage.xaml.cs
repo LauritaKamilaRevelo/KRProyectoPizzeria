@@ -1,5 +1,6 @@
 ﻿using KRMauiApp.Models;
 using Newtonsoft.Json;
+using System.Globalization;
 
 namespace KRMauiApp
 {
@@ -36,6 +37,20 @@ namespace KRMauiApp
             {
                 await DisplayAlert("Error", ex.Message, "OK");
             }
+        }
+    }
+    public class BoolToTextConverter : IValueConverter
+    {
+        public static BoolToTextConverter Instance { get; } = new BoolToTextConverter();
+
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return (bool)value ? "Incluye Coca-Cola" : "No incluye Coca-Cola";
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
         }
     }
 
