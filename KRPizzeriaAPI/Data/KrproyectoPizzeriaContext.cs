@@ -16,7 +16,7 @@ public partial class KrproyectoPizzeriaContext : DbContext
     {
     }
 
-    public virtual DbSet<Krpizzerium> Krpizzeria { get; set; }
+    public virtual DbSet<KRPizzeria> Krpizzeria { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
@@ -24,18 +24,18 @@ public partial class KrproyectoPizzeriaContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Krpizzerium>(entity =>
+        modelBuilder.Entity<KRPizzeria>(entity =>
         {
-            entity.HasKey(e => e.IdKrpizzeria);
+            entity.HasKey(e => e.idKRPizzeria);
 
             entity.ToTable("KRPizzeria");
 
-            entity.Property(e => e.IdKrpizzeria).HasColumnName("idKRPizzeria");
-            entity.Property(e => e.KrName).HasColumnName("KR_Name");
-            entity.Property(e => e.KrPrecio)
+            entity.Property(e => e.idKRPizzeria).HasColumnName("idKRPizzeria");
+            entity.Property(e => e.KR_Name).HasColumnName("KR_Name");
+            entity.Property(e => e.KR_Precio)
                 .HasColumnType("decimal(18, 2)")
                 .HasColumnName("KR_Precio");
-            entity.Property(e => e.KrWithCocaCola).HasColumnName("KR_WithCocaCola");
+            entity.Property(e => e.KR_WithCocaCola).HasColumnName("KR_WithCocaCola");
         });
 
         OnModelCreatingPartial(modelBuilder);

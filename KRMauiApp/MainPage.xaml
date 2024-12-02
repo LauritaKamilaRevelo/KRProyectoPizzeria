@@ -13,7 +13,8 @@
         <ListView x:Name = "listView">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text = "{Binding KR_Name}"/>
+                    <TextCell Text = "{Binding KR_Name}"
+                              Detail="{Binding KR_Precio}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

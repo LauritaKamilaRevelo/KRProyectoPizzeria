@@ -1,11 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using KRPizzeriaAPI.Controllers;
+using KRPizzeriaAPI.Data;
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<KRPizzeriaAPIContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("KRPizzeriaAPIContext") ?? throw new InvalidOperationException("Connection string 'KRPizzeriaAPIContext' not found.")));
-
 // Add services to the container.
+builder.Services.AddSqlServer<KrproyectoPizzeriaContext>(builder.Configuration.GetConnectionString("PizzeriaConection"));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

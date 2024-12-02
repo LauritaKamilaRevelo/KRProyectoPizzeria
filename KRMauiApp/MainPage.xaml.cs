@@ -11,16 +11,30 @@ namespace KRMauiApp
             InitializeComponent();
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
-            var client = new HttpClient();
-            client.BaseAddress = new Uri("https://localhost:7088");
-            var response=client.GetAsync("KRPizza").Result;
-            if (response.IsSuccessStatusCode)
+            try
             {
-                var KRPizzas = response.Content.ReadAsStringAsync().Result;
-                var KRPPizzasList = JsonConvert.DeserializeObject<List<KRPizzeria>>(KRPizzas);
-                listView.ItemsSource = KRPPizzasList;
+                using (var client = new HttpClient())
+                {
+                    client.BaseAddress = new Uri("https://localhost:7088/api/");
+                    var response = await client.GetAsync("KRPizzeria");
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var KRPizzas = await response.Content.ReadAsStringAsync();
+                        var KRPPizzasList = JsonConvert.DeserializeObject<List<KRPizzeria>>(KRPizzas);
+                        listView.ItemsSource = KRPPizzasList;
+                    }
+                    else
+                    {
+                        await DisplayAlert("Error", $"Error: {response.StatusCode}", "OK");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", ex.Message, "OK");
             }
         }
     }
